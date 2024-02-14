@@ -14,10 +14,24 @@ vector<int> freqArr(vector<int> v)
     
     return res;
 }
+
+int toBinary(int n){
+  int ans = 0,p = 1;
+  while(n>0)
+  {
+    int lastBit = n&1;
+    ans+=lastBit*p;
+    p*=10;
+    n = n>>1;
+  } 
+
+  return ans;
+}
+
 void solve(){
-	vector<int> freq = freqArr(v); // To calculate Frequency Array.
+	// vector<int> freq = freqArr(v); // To calculate Frequency Array.
 	
-	
+	 // toBinary(n); // decimal to binary
 }
 
 int main()
